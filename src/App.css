@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-size: auto;
+    transition: background-color 0.5s ease;
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Navbar Section */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    background-color: lightgray;
+    transition: background-color 0.5s ease;
+    position: sticky;
+    width: auto;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul {
+    height: 50px;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    align-content: end;
+    list-style: none;
+}
+
+nav ul div {
+    padding-left: 1rem;
+}
+
+/* Estilos del switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    transition: background-color 0.4s;
+    background-color: var(--switch-bg);
+    border-radius: 34px;
+    color: white;
+}
+
+input:checked+.slider {
+    background-color: var(--switch-checked-bg);
+}
+
+/* Card and Home Section */
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    background-color: rgb(230, 230, 230);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.10);
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.card p {
+    text-align: center;
+}
+
+.card button {
+    border-radius: 0 0 30px 30px;
+    background-color: rgb(184, 184, 184);
+}
+.card button:hover {
+    background-color: #006eff;
+}
+
+.card-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 80vw;
+    height: auto;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+    margin: 16px auto;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favButton {
+    background-color: rgba(136, 136, 136, 0.116);
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Contact section */
+.contact {
+    text-align: center;
+    padding: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+form input {
+    height: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+textarea {
+    height: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+form button {
+    border-radius: 30px;
+    height: 2rem;
+    width: 6rem;
+    margin: 0 auto;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* Details Section */
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.details th,
+.details td {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.details th {
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+}
+
+.details tr:nth-child(even) {
+    background-color: var(--row-background);
+}
+
+.details p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Footer Section */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    position: relative;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 10vh;
+    transition: background-color 0.5s ease;
+    background-color: #006eff;
+    margin: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-content .footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-content .footer-left img {
+    width: 150px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.footer-content .footer-right img {
+    margin: 1rem;
+    width: 30px;
+    height: auto;
+}
+
+.footer-content .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main,
+.contact,
+.favs,
+.details {
+    flex-grow: 1;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    height: 100%;
+    min-height: 75vh;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+
+/* Theme Settings Section */
+/* If Ligth Mode is active, all default. */
+/* If Dark Mode is active, all the following styles will be applied.  */
+
+.dark {
+    background-color: rgba(24, 24, 29, 0.7);
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+.dark main,
+.dark .contact,
+.dark .favs,
+.dark .details {
+    background-color: rgba(24, 24, 29, 0.7);
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+.dark nav {
+    background-color: #000;
+}
+
+.dark a {
+    color: white;
+}
+
+.dark .card {
+    background-color: black;
+}
+
+.dark .card button {
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.dark .card button:hover {
+    background-color: #006eff;
+}
+
+.dark form input {
+    border: none;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    background-color: rgba(1, 1, 255, 0);
+    color: white;
+}
+
+.dark form input::placeholder {
+    color: rgb(212, 212, 212);
+}
+
+.dark form input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.dark footer {
+    background-color: rgba(54, 54, 65, 0.7);
+}
