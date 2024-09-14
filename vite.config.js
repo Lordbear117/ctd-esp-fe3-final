@@ -7,4 +7,5 @@ export default defineConfig({
     historyApiFallback: true,
   },
   plugins: [react()],
+  base: '/',
 })
